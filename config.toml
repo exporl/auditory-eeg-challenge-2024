@@ -1,4 +1,4 @@
-baseURL = 'https://berndie.github.io/audeeg-challenge-2023/'
+baseURL = 'https://exporl.github.io/auditory-eeg-challenge-2023/'
 languageCode = 'en-us'
 title = 'ICASSP 2023: Auditory EEG challenge'
 theme = ["hugo-chart", "arcana"]
