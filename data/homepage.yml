@@ -1,0 +1,24 @@
+banner:
+  enable: true
+  image: "images/ICASSP_2023_Web_banner.webp"
+  contents: "**Auditory EEG Challenge:** _ICASSP 2023_"
+  button:
+    contents: "Get started"
+    url: "#baseline"
+items:
+
+  - type: heading
+    heading: Relating speech to EEG
+    contents: This challenge focuses on establishing a relationship between measured brain activity (EEG) and an auditory stimulus
+
+  - type: other
+    #heading: Recent Posts
+    content_type: homepage_sections
+    max: 4
+
+
+  - type: cta
+    contents: Are you ready?
+    button:
+      contents: Get started with task 1
+      url: "task1"
