@@ -4,7 +4,7 @@ description: "Task 1: Match-mismatch"
 menu: main
 weight: 80
 ---
-
+{{< figure src="../images/task_matchmismatch.png" title="Schematic overview of the match-mismatch task " >}}
 
 # Description
 
@@ -28,6 +28,9 @@ A way to do this is to ensure that the shift when windowing (1s in our code) is 
 segment (1s). Failing to follow these suggestions is likely to result in models simply remembering the training samples and thus failing to
 generalize to the test set.
 
+The code for this task can be found on our [github repository](https://github.com/exporl/auditory-eeg-challenge-2023-code)
+
+{{< figure src="../images/code_flow_classification.png" title="provided code files and suggested starting point for the Match-mismatch task" >}}
 
 # Baseline
 
@@ -60,6 +63,6 @@ For evaluation, we will calculate the mean accuracy score per subject. Then, we 
 test set 1 and test set 2 and add them to obtain a final **score**, which will be updated in the online leaderboard. 
 
 
-{{< figure src="/images/score_match_mismatch.jpg" title="Final score calculation" >}}
+{{< figure src="../images/score_match_mismatch.jpg" title="Final score calculation" >}}
 
-![Leo](/images/score_match_mismatch.jpg)
+

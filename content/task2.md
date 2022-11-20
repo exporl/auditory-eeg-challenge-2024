@@ -4,6 +4,7 @@ description: "Task 2: regression"
 menu: main
 weight: 80
 ---
+{{< figure src="../images/task_regression.png" title="Schematic overview of the regression task" >}}
 
 # Description 
 
@@ -14,8 +15,11 @@ For this task, the stimulus representation is defined as the envelope, as descri
 Participants are free to create their methods. However, remember that the stimulus
 objective is fixed, as defined by the python file envelope.py.
 
+The code for this task can be found on our [github repository](https://github.com/exporl/auditory-eeg-challenge-2023-code)
 
-# Baseline 
+
+
+# Baseline {{< figure src="../images/code_flow_regression.png" title="provided code files and suggested starting point for the regresssion task" >}}
 
 As a first baseline, we include a linear backward model. The linear model 
 reconstructs the speech envelope from EEG by using a linear transformation across all 
@@ -54,3 +58,4 @@ A correlation value of 0 will be taken in case of
 absent EEG ID entries. The reconstructed envelope should be of dimensions 1 x 3840 (i.e., 60 seconds of data at the prescribed sample rate
 of 64 Hz).
 
+{{< figure src="../images/score_regression.png" title="Final score calculation" >}}
