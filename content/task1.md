@@ -60,6 +60,6 @@ For evaluation, we will calculate the mean accuracy score per subject. Then, we 
 test set 1 and test set 2 and add them to obtain a final **score**, which will be updated in the online leaderboard. 
 
 
-{{< figure src="/images/ICASSP_2023_Web_banner.webp" title="Final score calculation" >}}
+{{< figure src="/images/score_match_mismatch.jpg" title="Final score calculation" >}}
 
-
+![Leo](/images/score_match_mismatch.jpg)

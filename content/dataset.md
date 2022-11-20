@@ -33,7 +33,7 @@ stimuli between subjects to have a wide range of unique speech material. The sti
 longer than 15 minutes. In this case, they are split into two trials presented consecutively to the subject.
 
 
-{{< figure src="static/images/train_test_division.png" title="Steve Francia" >}}
+{{< figure src="images/train_test_division.png" title="Steve Francia" >}}
 
 
 
