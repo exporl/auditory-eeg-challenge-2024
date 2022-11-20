@@ -1,6 +1,6 @@
 ---
 title: "Task 1: Match-mismatch"
-description: "Task 1: Match-mismatch"
+description: "given and EEG segment and two stimuli, classify which one of the input segments corresponds to the EEG"
 menu: main
 weight: 80
 ---
@@ -13,9 +13,9 @@ Task 1 is a classification problem in a match-mismatch paradigm. In this paradig
 (2) the time-aligned speech stimulus (match)
 (3) an imposter stimulus (mismatch) 
 
-The task of the model is to determine which of the input envelope segments corresponds to the EEG. The performance metric is the classification accuracy (%). 
+The task of the model is to determine which of the input stimulus segments corresponds to the EEG. The performance metric is the classification accuracy (%). 
 
-The input length of all (EEG, envelope) pairs is 3 s. We define the mismatched stimulus to be temporally close to the matched one
+The input length of all (EEG, envelope) pairs is 3s. We define the mismatched stimulus to be temporally close to the matched one
 by taking the segment starting either one second after the end of the matched segment or 4 seconds before the start of the matched segment.
 Figure 2 contains an overview of the provided code and our recommended starting flow. We provide code to generate an envelope and
 mel spectrogram representation from the raw audio files. However, participants can freely perform audio processing and use their preferred

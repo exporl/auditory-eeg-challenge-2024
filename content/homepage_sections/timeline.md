@@ -4,7 +4,8 @@ description: "Timeline"
 ---
 
 
-# Timeline
+## Timeline
+
 - November 21, 2022: Registration opens
 - November 21, 2022: Release of training set, code, baseline methods and documentation
 - January 6, 2023: Release of evaluation test set

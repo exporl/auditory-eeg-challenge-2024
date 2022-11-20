@@ -1,6 +1,6 @@
 ---
-title: "Task 2: regression"
-description: "Task 2: regression"
+title: "Task 2: Regression"
+description: "Reconstruct the stimulus from the EEG"
 menu: main
 weight: 80
 ---
