@@ -1,5 +1,5 @@
 banner:
-  enable: true
+  enable: false
   image: "images/ICASSP_2023_Web_banner.webp"
   contents: "**Auditory EEG Decoding Challenge:** _ICASSP 2023_"
   button:
