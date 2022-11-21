@@ -48,7 +48,7 @@ In total, the training set contains 508 trials, from 71 subjects, using 57 diffe
 Each EEG trial file contains a pointer to the stimulus used to generate the specific brain EEG response and reference
 to the subject identifier. The auditory stimuli are provided in a separate folder stimuli.
 
-The test set can be downloaded here, using the password which will be provided to all registered teams: [ICASSP-2023-eeg-decoding-challenge-dataset](https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EkaIjOmoPIRHmYLdLK8b2VQBY_2ouqNSnHHTHyRl3Zn-2w?e=KhX7d0)
+The training set can be downloaded here, using the password which will be provided to all registered teams: [ICASSP-2023-eeg-decoding-challenge-dataset](https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EkaIjOmoPIRHmYLdLK8b2VQBY_2ouqNSnHHTHyRl3Zn-2w?e=KhX7d0)
  
 
 

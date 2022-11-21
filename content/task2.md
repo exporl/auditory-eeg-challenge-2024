@@ -17,9 +17,11 @@ objective is fixed, as defined by the python file envelope.py.
 
 The code for this task can be found on our [github repository](https://github.com/exporl/auditory-eeg-challenge-2023-code)
 
+{{< figure src="../images/code_flow_prepro.png" title="provided code files and suggested starting point for the regresssion task" >}}
+{{< figure src="../images/code_flow_regression.png" title="provided code files and suggested starting point for the regresssion task" >}}
 
 
-# Baseline {{< figure src="../images/code_flow_regression.png" title="provided code files and suggested starting point for the regresssion task" >}}
+# Baseline 
 
 As a first baseline, we include a linear backward model. The linear model 
 reconstructs the speech envelope from EEG by using a linear transformation across all 

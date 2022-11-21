@@ -30,6 +30,7 @@ generalize to the test set.
 
 The code for this task can be found on our [github repository](https://github.com/exporl/auditory-eeg-challenge-2023-code)
 
+{{< figure src="../images/code_flow_prepro.png" title="provided code files and suggested starting point for the Match-mismatch task" >}}
 {{< figure src="../images/code_flow_classification.png" title="provided code files and suggested starting point for the Match-mismatch task" >}}
 
 # Baseline
