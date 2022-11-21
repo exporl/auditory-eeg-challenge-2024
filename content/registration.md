@@ -10,7 +10,7 @@ Teams can register by sending a mail to
 auditoryeegchallenge@kuleuven.be with the names of the team members, emails, and affiliations. Upon confirmation, teams will receive access to the training data. 
 
 
-#Guidelines for participants
+# Guidelines for participants
 
 - Participants can submit their predictions up to five times. The latest received submission counts as the official score.
 - The Audio-EEG challenge features two separate tasks. Participants can submit to either one track or both. Results should be accom-
