@@ -59,8 +59,8 @@ over.
 - **Test Set 1 (held-out stories)** contains data for the 71 subjects seen in training. We held out one story for each group of subjects, which never
 occurs in the training set, amounting to a total of 944 minutes.
 - **Test Set 2 (held-out subjects)** contains data for 14 subjects (sub-72 to sub-85) that are not in the training set, further referred to as held-out
-subjects, for a total of 1260 minutes. The data for these subjects were acquired using the same protocol as for the other 71 subjects.
-
+subjects, for a total of 1260 minutes. The data for these subjects were acquired using the same protocol as for the other 71 subjects. 
+ 
 
 # Preprocessing 
 
