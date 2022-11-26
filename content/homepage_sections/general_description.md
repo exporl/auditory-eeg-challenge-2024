@@ -3,10 +3,7 @@ title: "General description"
 description: "General description"
 ---
 
-
-
 ## Challenge Call 
-
 
 Various neuroimaging techniques can be used to investigate how the brain processes sound.
 Electroencephalography (EEG) is popular because it is relatively easy to conduct and has a high temporal
@@ -32,4 +29,6 @@ We provide the dataset, code for preprocessing the EEG and for creating commonly
 representations, and two baseline methods.  
 
 Teams can register by sending a mail to
-auditoryeegchallenge@kuleuven.be with the names of the team members, emails, and affiliations.
+[auditoryeegchallenge@kuleuven.be](auditoryeegchallenge@kuleuven.be) with the names of the team members, emails, and affiliations.
+The intellectual property (IP) is not transferred to the challenge organizers, i.e. if the code is shared/submitted, the participants remain 
+the owners of their code. 

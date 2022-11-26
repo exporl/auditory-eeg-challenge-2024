@@ -29,4 +29,6 @@ cessing and data augmentation methods to better train the models. All stimulus i
 information can be deduced based on the training set.
 - All parameters should be tuned on the training set. The test sets can be used only in an evaluation paradigm to provide output
 labels/predictions.
+- Upon submission, we ask that the teams submit their code, along with the generated predictions. This code will not be shared and the intellectual property belongs to the participants at all times. 
+- Additionally, we encourage all teams to publically share their code at the end of the contest. 
 

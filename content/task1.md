@@ -9,9 +9,9 @@ weight: 80
 # Description
 
 Task 1 is a classification problem in a match-mismatch paradigm. In this paradigm, three inputs are presented to the model: 
-(1) a segment of EEG, 
-(2) the time-aligned speech stimulus (match)
-(3) an imposter stimulus (mismatch) 
+1) a segment of EEG, 
+2) the time-aligned speech stimulus (match)
+3) an imposter stimulus (mismatch) 
 
 The task of the model is to determine which of the input stimulus segments corresponds to the EEG. The performance metric is the classification accuracy (%). 
 
@@ -29,9 +29,6 @@ segment (1s). Failing to follow these suggestions is likely to result in models 
 generalize to the test set.
 
 The code for this task can be found on our [github repository](https://github.com/exporl/auditory-eeg-challenge-2023-code)
-
-{{< figure src="../images/code_flow_prepro.png" title="provided code files and suggested starting point for the Match-mismatch task" >}}
-{{< figure src="../images/code_flow_classification.png" title="provided code files and suggested starting point for the Match-mismatch task" >}}
 
 # Baseline
 
