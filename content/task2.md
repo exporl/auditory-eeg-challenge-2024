@@ -56,4 +56,4 @@ A correlation value of 0 will be taken in case of
 absent EEG ID entries. The reconstructed envelope should be of dimensions 1 x 3840 (i.e., 60 seconds of data at the prescribed sample rate
 of 64 Hz).
 
-{{< figure src="../images/score_regression.png" title="Final score calculation" >}}
+{{< figure src="../images/score_regression.png" title=" " >}}
