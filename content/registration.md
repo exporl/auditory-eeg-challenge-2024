@@ -30,9 +30,9 @@ information can be deduced based on the training set.
 labels/predictions.
 - Upon submission, we ask that the teams submit their code, along with the generated predictions. This code will not be shared and the intellectual property belongs to the participants at all times. 
 - Additionally, we encourage all teams to publically share their code at the end of the contest. 
-- The use of external data (both training data and pretrained models) is allowed, on the following conditions: 
-    1. The datasets, or pretrained models, should be publicly and freely available. Participants wishing to use data/models that are publicly available, but not free, should contact the organisers to discuss if these data can be used. 
-    2. Only datasets/pretrained models weights that have been made publicly available before the start of this challenge, i.e. **put online before November 21, 2022**, are allowed to be used 
+- The use of external data (both training data and/or pretrained models) is allowed, on the following conditions: 
+    1. The datasets, or pretrained models, should be publicly and freely available. Participants wishing to use data/models that are publicly available, but not free, should contact the organisers to discuss if the data can be used. 
+    2. Only datasets/pretrained models that have been made publicly available before the start of this challenge, i.e. **put online before November 21, 2022**, are allowed to be used. 
     3. Upon submission of their results, teams should explicitly mention which extra datasets/model weights they have used to generate their predictions.
-    4. When using models with pretrained model weights, only the model weights have to be publicly available (not also the data used to calculate the model weights) 
+    4. You can still use a publicly available pretrained model even if the data which the model is trained on is not open to public.
 
