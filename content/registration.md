@@ -22,8 +22,7 @@ the IEEE SPS CDC committee and ICASSP-2023 GC Chairs.
 - Winners will be selected according to the best performance for every single task. One winner for each task will be selected
 - The top 5 teams will be determined as follows: the top 2 teams for track 1 and the top two teams for track 2. The fifth team will be
 chosen as the third-ranking team in the task with the most submissions.
-- Each participant can only be included in one participating team
-- The use of any external data that the organizers do not provide is strictly prohibited.
+- Each participant can only be included in one participating team    
 - Participants can use the full training set to train the models for both tasks. We encourage the participants to explore different prepro-
 cessing and data augmentation methods to better train the models. All stimulus information can be used for training, provided that the
 information can be deduced based on the training set.
@@ -31,4 +30,9 @@ information can be deduced based on the training set.
 labels/predictions.
 - Upon submission, we ask that the teams submit their code, along with the generated predictions. This code will not be shared and the intellectual property belongs to the participants at all times. 
 - Additionally, we encourage all teams to publically share their code at the end of the contest. 
+- The use of external data (both training data and pretrained models) is allowed, on the following conditions: 
+    1. The datasets, or pretrained models, should be publicly and freely available. Participants wishing to use data/models that are publicly available, but not free, should contact the organisers to discuss if these data can be used. 
+    2. Only datasets/pretrained models weights that have been made publicly available before the start of this challenge, i.e. **put online before November 21, 2022**, are allowed to be used 
+    3. Upon submission of their results, teams should explicitly mention which extra datasets/model weights they have used to generate their predictions.
+    4. When using models with pretrained model weights, only the model weights have to be publicly available (not also the data used to calculate the model weights) 
 
