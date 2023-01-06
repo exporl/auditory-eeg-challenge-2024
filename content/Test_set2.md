@@ -44,7 +44,7 @@ The json file(s) should contain the predicted labels for all EEG segments.Each e
  
 A correlation value of 0 will be taken in case of absent EEG ID entries. The reconstructed envelope should be of dimensions 1 x 3840 (i.e., 60 seconds of data at the prescribed sample rate
 of 64 Hz).
-We provide the script [predict_test.py](), which loads a pretrained model, loops over all the data of the test set, predicts the output labels and returns json files
+We provide the script [predict_test.py](https://github.com/exporl/auditory-eeg-challenge-2023-code/blob/main/task2_regression/experiments/predict_test.py), which loads a pretrained model, loops over all the data of the test set, predicts the output labels and returns json files
 in the correct format. 
 
 For evaluation, we will calculate the mean correlation score per subject. Then, we will calculate the mean over all the subjects means for both 
