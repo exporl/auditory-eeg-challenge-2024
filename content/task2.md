@@ -48,7 +48,7 @@ Afterwards, the mean correlation value per subject is calculated. Then, we calcu
 2 and add both scores to obtain a final score, which will serve as the final ranking value.
 
 
-Participants should submit a NumPy dictionary file for the test set to an online form on our website, which contains the reconstructed
+Participants should submit a json dictionary file for the test set to an online form on our website, which contains the reconstructed
 envelopes for all EEG segments. Afterward, we will calculate the score mentioned above and update this in the online leaderboard. Each
 entry in the submitted dictionary should be of the form (EEG ID) : (Reconstructed Envelope).
  

@@ -52,7 +52,7 @@ For test set 2, some stimuli have already appeared in the training set, but the 
 
 
 For these test sets, we will provide pairs of (EEG, stimulus 1, and stimulus 2), with a length of 3 seconds, each with a unique identifier
-and a subject identifier. As an output, participants should submit a NumPy dictionary file to an online form on our website which contains the
+and a subject identifier. As an output, participants should submit a json dictionary file to an online form on our website which contains the
 predicted label for all EEG segments. Each entry in the submitted dictionary should be of the form **(EEG ID) : (label)**. In case of absent EEG
 ID entries, the sample will be assigned the wrong label. Labels should be either 0 or 1.
 
