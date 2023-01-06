@@ -5,8 +5,6 @@ menu: main
 weight: 80
 ---
 
-# task 1
-
 ---
 
 ### Provided test dataset
