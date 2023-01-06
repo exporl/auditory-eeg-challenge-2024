@@ -6,6 +6,29 @@ weight: 80
 ---
 
 # task 2
+
+---
+
+### Provided test data
+
+The test data for this task can be downloaded from [here](/http).
+The directory contains the following items:
+
+1) **Preprocessed EEG test samples**:  The main directory contains 84 subjects' test data in the format 
+of subject_name.json. Note that there is no test data for sub-001. Each json file contains a python dictionary with samples
+IDs as keys and EEG segments of one minute as values. The preprocessed EEG segments are at 64 Hz sampling rate. You probably need
+to convert EEG segments from list to numpy array.
+
+2) **raw_eeg**: 
+ We also provide the corresponding raw EEG files for each subject. If you prefer to have access
+to the raw EEG and do your own preprocessing, then you can use this directory. The json files in this directory have exactly
+the same format as of the preprocessed EEG files. Sampling rate of the raw EEG is 1024 Hz.
+
+ 
+ 
+ 
+ 
+ 
  
 ### Expected Output 
 
