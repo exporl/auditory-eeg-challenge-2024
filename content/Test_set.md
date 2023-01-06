@@ -53,7 +53,7 @@ using the following code:
 The json file(s) should contain the predicted labels for all EEG segments. Each entry in the submitted file should be of the form **(EEG ID) : (label)**. In case of absent EEG
 ID entries, the sample will be assigned the wrong label. Labels should be either 0 or 1. 
 
-We provide the script [predict_test.py](), which loads a pretrained model, loops over all the data of the test set, predicts the output labels and returns json files
+We provide the script [predict_test.py](https://github.com/exporl/auditory-eeg-challenge-2023-code/blob/main/task1_match_mismatch/experiments/predict_test.py), which loads a pretrained model, loops over all the data of the test set, predicts the output labels and returns json files
 in the correct format. 
 
 For evaluation, we will calculate the mean accuracy score per subject. Then, we will calculate the mean over all the subjects means for both 
