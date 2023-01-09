@@ -9,7 +9,8 @@ weight: 80
 
 ### Provided test data
 
-The test data for this task can be downloaded from [here](/http).
+The test data for this task can be downloaded from [here](https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EppWDp36B6dHuujhaPEaDzkBHXyTe18mZhuiXyHdIOTcpQ?e=jXk9g9).
+The password is the same one as provided for the training set.
 The directory contains the following items:
 
 1) **Preprocessed EEG test samples**:  The main directory contains 84 subjects' test data in the format 
@@ -31,6 +32,8 @@ the same format as of the preprocessed EEG files. Sampling rate of the raw EEG i
 ### Expected Output 
 
  As an output, participants should upload a zip file, containing json files to [the following link](https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EhUxPLaiLjBInBAHEY3NNmYBVZMF8W-FtHojulxtY0k7RQ)
+ 
+ 
  The files should follow the following naming convention: 
  
  task_2_group_**group_name**_submission _**submission_number**.zip 

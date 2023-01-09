@@ -9,7 +9,8 @@ weight: 80
 
 ### Provided test dataset
 
-The test data for this task can be downloaded from [here](https://path).
+The test data for this task can be downloaded from [here](https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EoOWlx13No1Jnlo4tV5q3_4BuDN51NYAOpIlHQ44MVGh4Q?e=cLi33z). 
+The password is the same one as provided for the training set. 
 The directory contains following items:
 1) **Preprocessed EEG test samples**: The main directory contains 84 subjects' test data in the format 
 of subject_name.json. Note that there is no test data for sub-001. Each json file contains a python dictionary with 
