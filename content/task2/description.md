@@ -1,10 +1,10 @@
 ---
 title: "Task 2: Regression"
 description: "Reconstruct the stimulus from the EEG"
-menu: main
+menu: task2
 weight: 80
 ---
-{{< figure src="../images/task_regression.png" title="Schematic overview of the regression task" >}}
+{{< figure src="../../images/task_regression.png" title="Schematic overview of the regression task" >}}
 
 # Description 
 
@@ -56,4 +56,4 @@ A correlation value of 0 will be taken in case of
 absent EEG ID entries. The reconstructed envelope should be of dimensions 1 x 3840 (i.e., 60 seconds of data at the prescribed sample rate
 of 64 Hz).
 
-{{< figure src="../images/score_regression.png" title=" " >}}
+{{< figure src="../../images/score_regression.png" title=" " >}}

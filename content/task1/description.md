@@ -1,10 +1,10 @@
 ---
 title: "Task 1: Match-mismatch"
 description: "given and EEG segment and two stimuli, classify which one of the input segments corresponds to the EEG"
-menu: main
+menu: task1
 weight: 80
 ---
-{{< figure src="../images/task_matchmismatch.png" title="Schematic overview of the match-mismatch task " >}}
+{{< figure src="../../images/task_matchmismatch.png" title="Schematic overview of the match-mismatch task " >}}
 
 # Description
 
@@ -61,6 +61,6 @@ For evaluation, we will calculate the mean accuracy score per subject. Then, we 
 test set 1 and test set 2 and add them to obtain a final **score**, which will be updated in the online leaderboard. 
 
 
-{{< figure src="../images/score_match_mismatch.jpg" title=" " >}}
+{{< figure src="../../images/score_match_mismatch.jpg" title=" " >}}
 
 
