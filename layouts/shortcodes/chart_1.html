@@ -1,0 +1,79 @@
+{{ $w := default "100" (.Get 0) }}
+{{ $h := default "300" (.Get 1) }}
+{{ $r := ( .Inner | chomp) }}
+{{ $seed := "foo" }}
+{{ $id := delimit (shuffle (split (md5 $seed) "" )) "" }}
+
+<div style="width: {{ $w }}%;height: {{ $h }}px;margin: 0 auto">
+    <canvas id="{{ $id }}"></canvas>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+<script type="module">
+     import data from '../scores_task1.json' assert { type: 'json' };
+    console.log(data);
+
+    // create array of key-value pairs
+    var items = Object.keys(data).map(
+        (key) => {return [key, data[key]]}
+    );
+
+    // sort the array based on the total value
+     items.sort(
+         (first, second) => {return first[1]['total'] - second[1]['total']}
+     );
+
+     // obtain the list of keys in sorted order
+     var groupNames = items.map(
+         (e) => {return e[0]}
+     );
+
+     // obtain the list of total values in sorted order
+     var results = items.map(
+         (e) => {return e[1]['total']}
+     );
+
+    var ctx = document.getElementById('{{ $id }}').getContext('2d');
+    var options = {
+    type: 'bar',
+    data: {
+        labels: groupNames,
+        datasets: [{
+            label: 'Results for task 1: Match-mismatch',
+            data: results,
+            backgroundColor:
+                'rgba(255, 99, 132, 0.2)'
+            ,
+            borderColor:
+                'rgba(255, 99, 132, 1)'
+            ,
+            borderWidth: 1
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        responsive: true,
+        title: {
+            display: true,
+            text: 'Test set total score for Task1: match-mismatch'
+        },
+
+        scales: {
+            xAxes: [{scaleLabel: {
+                    display: true,
+                    labelString: 'group name'
+                }}],
+            yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Accuracy (%)'
+                },
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+};
+    new Chart(ctx, options);
+</script>
