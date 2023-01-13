@@ -35,4 +35,4 @@ labels/predictions.
     2. Only datasets/pretrained models that have been made publicly available before the start of this challenge, i.e. **put online before November 21, 2022**, are allowed to be used. 
     3. Upon submission of their results, teams should explicitly mention which extra datasets/model weights they have used to generate their predictions.
     4. You can still use a publicly available pretrained model even if the data which the model is trained on is not open to public.
-
+- Participants can fine-tune their model on each test subject to have a subject specific model (this can only be done for subjects that are also present in the train set).
