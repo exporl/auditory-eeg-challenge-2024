@@ -51,7 +51,8 @@ using the following code:
  the first submission and can go up to 5. We will use the latest submission as the final submission, from which the ranking will be calculated. Groups that have not yet supplied their group name, should send a mail to the
  organisers where they specify their name. When uploading, you will be prompted to enter a name. Please enter the name of one of the officially registered participants. 
  
-The json file(s) should contain the predicted labels for all EEG segments. Each entry in the submitted file should be of the form **(EEG ID) : (label)**. In case of absent EEG
+The json file(s) should contain the predicted labels for all EEG segments. Each entry in the submitted file should be of the form **(EEG ID) : (label)**.
+The label is 0 if stimulus 1 matches EEG and 1 if stimulus 2 matches EEG. In case of absent EEG
 ID entries, the sample will be assigned the wrong label. Labels should be either 0 or 1. 
 
 We provide the script [predict_test.py](https://github.com/exporl/auditory-eeg-challenge-2023-code/blob/main/task1_match_mismatch/experiments/predict_test.py), which loads a pretrained model, loops over all the data of the test set, predicts the output labels and returns json files
