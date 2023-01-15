@@ -4,12 +4,27 @@
 {{ $seed := "foo" }}
 {{ $id := delimit (shuffle (split (md5 $seed) "" )) "" }}
 
+
+{{ $vendor := newScratch }}
+{{ $vendor.Add "script" (readFile "node_modules/chart.js/dist/chart.umd.js") }}
+{{ $vendor.Add "script" (readFile "node_modules/@sgratzl/chartjs-chart-boxplot/build/index.umd.js") }}
+{{ $js := $vendor.Get "script" | resources.FromString "js/vendor.js" | resources.Minify | resources.Fingerprint }}
+
+<script src="{{ $js.Permalink }}"></script>
+
 <div style="width: {{ $w }}%;height: {{ $h }}px;margin: 0 auto">
+
     <canvas id="{{ $id }}"></canvas>
 </div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<div id="container" style="width: {{ $w }}%;height: {{ $h }}px;margin: 0 auto">
+
+  <canvas id="canvas"></canvas>
+</div>
+
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>-->
 
 <script type="module">
+
      import data from '../scores_task2.json' assert { type: 'json' };
     console.log(data);
 
@@ -33,6 +48,15 @@
          (e) => {return e[1]['total']}
      );
 
+     var withinResults = items.map(
+         (e) => {return e[1]['within']}
+     );
+
+     var heldoutResults = items.map(
+         (e) => {return e[1]['heldout']}
+     );
+
+
     var ctx = document.getElementById('{{ $id }}').getContext('2d');
     var options = {
     type: 'bar',
@@ -53,27 +77,92 @@
     options: {
         maintainAspectRatio: false,
         responsive: true,
-        title: {
+        plugins:{
+               title: {
             display: true,
             text: 'Test set total score for Task2: regression'
-        },
-
-        scales: {
-            xAxes: [{scaleLabel: {
-                    display: true,
-                    labelString: 'group name'
-                }}],
-            yAxes: [{
-                scaleLabel: {
-                    display: true,
-                    labelString: 'Pearson correlation '
-                },
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
         }
+
+        },
+        scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Group name'
+              }
+            },
+
+            y: {
+              title: {
+                display: true,
+                text: 'Pearson correlation'
+              }
+            }
+          }
+
     }
 };
     new Chart(ctx, options);
+
+
+    const boxplotData = {
+      // define label tree
+      labels: groupNames,
+      datasets: [{
+        label: 'Test set 1: held-out stories',
+        backgroundColor: 'rgba(255,0,0,0.5)',
+        borderColor: 'red',
+        borderWidth: 1,
+        outlierColor: '#999999',
+        padding: 10,
+        itemRadius: 0,
+        data: withinResults
+      }, {
+        label: 'Test set 2: held-out subjects',
+        backgroundColor:  'rgba(0,0,255,0.5)',
+        borderColor: 'blue',
+        borderWidth: 1,
+        outlierColor: '#999999',
+        padding: 10,
+        itemRadius: 0,
+        data:heldoutResults
+      }]
+    };
+    var  ctx = document.getElementById("canvas").getContext("2d");
+    new Chart(ctx, {
+    type: 'boxplot',
+    data: boxplotData,
+    options: {
+        maintainAspectRatio: false,
+        responsive: true,
+        plugins:{
+               title: {
+            display: true,
+            text: 'Detailed test set scores. Each point in the boxplot represents the average for one subject'
+        }
+
+        },
+        scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Group name'
+              }
+            },
+
+            y: {
+              title: {
+                display: true,
+                text: 'Pearson correlation'
+              }
+            }
+          }
+
+    }
+    });
+
+
+
+
+
 </script>
