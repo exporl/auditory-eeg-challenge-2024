@@ -13,4 +13,4 @@ hugo.linux
 /.hugo_build.lock
 
 #npm node_modules 
-node_modules/
+#node_modules/
