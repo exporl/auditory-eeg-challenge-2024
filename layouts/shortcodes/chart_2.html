@@ -26,7 +26,7 @@
 <script type="module">
 
      import data from '../scores_task2.json' assert { type: 'json' };
-    console.log(data);
+
 
     // create array of key-value pairs
     var items = Object.keys(data).map(
@@ -113,7 +113,7 @@
         backgroundColor: 'rgba(255,0,0,0.5)',
         borderColor: 'red',
         borderWidth: 1,
-        outlierColor: '#999999',
+        outlierColor: 'rgba(255,0,0,0.5)',
         padding: 10,
         itemRadius: 0,
         data: withinResults
@@ -122,7 +122,7 @@
         backgroundColor:  'rgba(0,0,255,0.5)',
         borderColor: 'blue',
         borderWidth: 1,
-        outlierColor: '#999999',
+        outlierColor: 'rgba(0,0,255,0.5)',
         padding: 10,
         itemRadius: 0,
         data:heldoutResults
