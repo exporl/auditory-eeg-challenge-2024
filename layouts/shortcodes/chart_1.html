@@ -22,8 +22,9 @@
 </div>
 
 <script type="module">
-     import data from '../scores_task1.json' assert { type: 'json' };
-
+     // import data from '../scores_task1.json' assert { type: 'json' };
+     const tmpUrl = "../scores_task1.json";
+     const data = await (await fetch(tmpUrl)).json();
 
     // create array of key-value pairs
     var items = Object.keys(data).map(

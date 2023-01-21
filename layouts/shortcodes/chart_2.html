@@ -25,7 +25,10 @@
 
 <script type="module">
 
-     import data from '../scores_task2.json' assert { type: 'json' };
+     // import data from '../scores_task2.json'  assert { type: 'json' };
+     // import data from '../scores_task2.json' ;
+     const tmpUrl = "../scores_task2.json";
+     const data = await (await fetch(tmpUrl)).json();
 
 
     // create array of key-value pairs
