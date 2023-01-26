@@ -21,8 +21,27 @@
   <canvas id="canvas"></canvas>
 </div>
 
+   <div class="container"><br>
+      <h3>
+        All results
+      </h3>
+      <br>
+      <table>
+        <thead><tr><td><b>Group name</b></td><td><b>Submission number</b></td>
+        <td><b>Within subjects mean </b></td>
+        <td><b>Within subjects std</b></td>
+        <td><b>Heldout subjects mean</b></td>
+        <td><b>Heldout subjects std</b></td>
+        <td><b>total score</b></td></tr></thead>
+        <tr id="root"></tr>
+      </table>
+    </div>
+
+
 <script type="module">
-     // import data from '../scores_task1.json' assert { type: 'json' };
+
+
+
      const tmpUrl = "../scores_task1.json";
      const data = await (await fetch(tmpUrl)).json();
 
@@ -31,10 +50,15 @@
         (key) => {return [key, data[key]]}
     );
 
+
+
     // sort the array based on the total value
      items.sort(
          (first, second) => {return first[1]['total'] - second[1]['total']}
      );
+
+
+
 
      // obtain the list of keys in sorted order
      var groupNames = items.map(
@@ -99,10 +123,8 @@
             }
           }
     }
-};
+    };
     new Chart(ctx, options);
-
-
 
 
     const boxplotData = {
@@ -163,5 +185,25 @@
 
     }
     });
+
+
+    // data for table with all results
+     const tmpUrl2 = "../scores_task1_means.json";
+     const data_table = await (await fetch(tmpUrl2)).json();
+
+
+    var root = document.getElementById('root');
+      data_table.forEach(element => root.insertAdjacentHTML('beforebegin', `<tr><td>${element.group_name}</td><td>${element.submission}</td>
+<td>${element.within_mean.toFixed(2)}</td>
+<td>${element.within_std.toFixed(2)}</td>
+<td>${element.heldout_mean.toFixed(2)}</td>
+<td>${element.heldout_std.toFixed(2)}</td>
+<td><b>${element.total.toFixed(2)}</b></td></tr>`));
+
+
+
+
+
+
 
 </script>
