@@ -1,5 +1,6 @@
 ---
 title: "Organizers"
+weight: 4
 description: "challenge organizers"
 ---
 
