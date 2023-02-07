@@ -10,6 +10,9 @@ items:
   - type: heading
     heading: Auditory EEG decoding challenge
     contents: This challenge focuses on establishing a relationship between measured brain activity (EEG) and an auditory stimulus
+    contents: Organizers: Mohammad Jalilpour Monesi, Lies Bollens, Bernd Accou, Hugo Van hamme, Tom Francart
+    KU Leuven, PSI, Dept. of Electrical engineering (ESAT), Leuven, Belgium
+    KU Leuven, ExpORL, Dept. Neurosciences, Leuven, Belgium
 
   - type: other
     #heading: Recent Posts
