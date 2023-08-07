@@ -7,7 +7,10 @@ weight: 80
 
 
 The training set can be downloaded here, using the password which will be provided to all registered teams: [ICASSP-2023-eeg-decoding-challenge-dataset](https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EkaIjOmoPIRHmYLdLK8b2VQBY_2ouqNSnHHTHyRl3Zn-2w?e=KhX7d0)
+
+For more details concerning the dataset, we refer to [the dataset paper](https://www.biorxiv.org/content/10.1101/2023.07.24.550310v1).
  
+
 
 # EEG
 

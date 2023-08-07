@@ -4,6 +4,10 @@ weight: 10
 description: "General description"
 ---
 
+## This Challenge is finished 
+This webpage describes the ICASSP Auditory EEG version of 2023. This challenge is now closed. Browse to The [new challenge page](https://exporl.github.io/auditory-eeg-challenge-2023/) 
+for the ICASSP Auditory EEG 2024 challenge. This page will not be updated or maintained any further. 
+
 ## Challenge Call 
 
 Various neuroimaging techniques can be used to investigate how the brain processes sound.

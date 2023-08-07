@@ -1,5 +1,5 @@
 {{ $w := default "100" (.Get 0) }}
-{{ $h := default "300" (.Get 1) }}
+{{ $h := default "600" (.Get 1) }}
 {{ $r := ( .Inner | chomp) }}
 {{ $seed := "foo" }}
 {{ $id := delimit (shuffle (split (md5 $seed) "" )) "" }}
@@ -127,7 +127,7 @@
 
     const boxplotData = {
       // define label tree
-      labels: groupNames,
+      labels: groupNames.slice(4),
       datasets: [{
         label: 'Test set 1: held-out stories',
         backgroundColor: 'rgba(255,0,0,0.5)',
@@ -136,7 +136,7 @@
         outlierColor: 'rgba(255,0,0,0.5)',
         padding: 10,
         itemRadius: 0,
-        data: withinResults
+        data: withinResults.slice(4)
       }, {
         label: 'Test set 2: held-out subjects',
         backgroundColor:  'rgba(0,0,255,0.5)',
@@ -145,7 +145,7 @@
         outlierColor: 'rgba(0,0,255,0.5)',
         padding: 10,
         itemRadius: 0,
-        data:heldoutResults
+        data:heldoutResults.slice(4)
       }]
     };
     var  ctx = document.getElementById("canvas").getContext("2d");
