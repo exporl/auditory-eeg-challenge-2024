@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Task1s on ICASSP 2024: Auditory EEG challenge</title>
+    <link>https://exporl.github.io/auditory-eeg-challenge-2024/task1/</link>
+    <description>Recent content in Task1s on ICASSP 2024: Auditory EEG challenge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://exporl.github.io/auditory-eeg-challenge-2024/task1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>leaderboard</title>
+      <link>https://exporl.github.io/auditory-eeg-challenge-2024/task1/leaderboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task1/leaderboard/</guid>
+      <description> All results Group nameSubmission number Within subjects mean Within subjects std Heldout subjects mean Heldout subjects std total score Challenge winners (top 3 teams):
+UnderDawgs (82.13 %) HyperAttention (79.05 %) MINWPU (78.94 %) </description>
+    </item>
+    
+    <item>
+      <title>Task 1: Match-mismatch</title>
+      <link>https://exporl.github.io/auditory-eeg-challenge-2024/task1/description/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task1/description/</guid>
+      <description>Schematic overview of the match-mismatch task Description Task 1 is a classification problem in a match-mismatch paradigm. In this paradigm, three inputs are presented to the model:
+a segment of EEG, the time-aligned speech stimulus (match) an imposter stimulus (mismatch) The task of the model is to determine which of the input stimulus segments corresponds to the EEG. The performance metric is the classification accuracy (%).
+The input length of all (EEG, envelope) pairs is 3s.</description>
+    </item>
+    
+    <item>
+      <title>Test Set Task 1</title>
+      <link>https://exporl.github.io/auditory-eeg-challenge-2024/task1/test_set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task1/test_set/</guid>
+      <description>Provided test dataset The test data for this task can be downloaded from here. The password is the same one as provided for the training set. The directory contains following items:
+Preprocessed EEG test samples: The main directory contains 84 subjects&amp;rsquo; test data in the format of subject_name.json. Note that there is no test data for sub-001. Each json file contains a python dictionary with sample IDs as keys and tuples in the format of (EEG, speech1, speech2) as values.</description>
+    </item>
+    
+  </channel>
+</rss>

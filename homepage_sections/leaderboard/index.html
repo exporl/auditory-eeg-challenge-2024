@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+
+<title>Get started | ICASSP 2024: Auditory EEG challenge</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="/auditory-eeg-challenge-2024/style.css" />
+<meta property="og:title" content="Get started" />
+<meta property="og:description" content="Get started" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://exporl.github.io/auditory-eeg-challenge-2024/homepage_sections/leaderboard/" /><meta property="article:section" content="homepage_sections" />
+
+
+
+</head>
+    <body class="is-preload">
+        <div id="page-wrapper"><div id="header">
+    <h1><a href="https://exporl.github.io/auditory-eeg-challenge-2024/" id="logo">
+        Auditory EEG Challenge - ICASSP 2024
+    </a></h1>
+
+    <nav id="nav">
+        <ul>
+                <li class="">
+                    <a href="/auditory-eeg-challenge-2024/">Home</a>
+                <li class="">
+                    <a href="/auditory-eeg-challenge-2024/dataset/">Dataset</a>
+                <li class="">
+                    <a href="/auditory-eeg-challenge-2024/registration/">Registration</a>
+                <li class="">
+                    <a href="#">Task 1: Match-Mismatch</a><ul>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task1/description">description</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task1/test_set">test set</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task1/leaderboard">leaderboard</a>
+                    </ul>
+                <li class="">
+                    <a href="#">Task 2: Regression</a><ul>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task2/description">description</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task2/test_set">test set</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task2/leaderboard">leaderboard</a>
+                    </ul>
+        </ul>
+    </nav>
+</div>
+
+            <section class="wrapper style1">
+                <div class="container">
+                    
+
+                        <div class="">
+                            <div id="content">
+                                <article>
+    <header>
+        <h2>Get started</h2>
+        <p>Get started</p>
+        
+        
+        <ul class="tags">
+</ul>
+
+    </header><h2 id="get-started">Get started</h2>
+<ol>
+<li>Send a mail to <a href="auditoryeegchallenge@kuleuven.be">auditoryeegchallenge@kuleuven.be</a> with the names of the team members, emails, and affiliations. You will receive a password to download the data</li>
+<li>Download the data from [https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi:10.48804/K3VSND](our official repository) or get the already zipped files from  <a href="https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EkaIjOmoPIRHmYLdLK8b2VQBY_2ouqNSnHHTHyRl3Zn-2w?e=KhX7d0">ICASSP-2023-eeg-decoding-challenge-dataset</a>
+<ul>
+<li><strong>split_data(.zip)</strong> contains already preprocessed, split and normalized data; ready for model training/evaluation. If you want to get started quickly, you can opt to only download this folder/zipfile.</li>
+<li><strong>preprocessed_eeg(.zip)</strong> and <strong>preprocessed_stimuli(.zip)</strong> contain preprocessed EEG and stimuli files ( speech envelope and mel spectrogram features) respectively. At this stage data is not yet split into different sets and not normalized. To go from this to the data in <strong>split_data.zip</strong>, you will have to run <em>task*/create_data/split_and_normalize.py</em> for the task you want to work on.</li>
+<li><strong>raw_eeg(_x.zip)</strong> and <strong>stimuli(.zip)</strong> contain the raw EEG and stimuli files. If you want to process the stimuli files, you can run <em>task*/create_data/speech_features.py</em>. Speech Envelope and/or mel spectrogram features will be stored in the processed_stimuli. Currently, no preprocessing code is made available to preprocess EEG, so you will have to write your own implementation or use the precomputed processed_eeg folder.</li>
+</ul>
+</li>
+</ol>
+<p>For more details concerning the dataset, we refer to <a href="https://www.biorxiv.org/content/10.1101/2023.07.24.550310v1">the dataset paper</a>.</p>
+<ol start="3">
+<li>Clone the starting code from our <a href="https://github.com/exporl/auditory-eeg-challenge-2023-code">github repository</a> and get started.
+The repository contains preprocessing code, as well as baseline models for each of the tasks.</li>
+</ol>
+
+
+                                </article>
+                            </div>
+                        </div>
+
+                    
+                </div>
+            </section><div id="footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+
+    <ul class="icons">
+    </ul>
+
+    <div class="copyright">
+        <ul class="menu">
+            
+                <li>Design: <a href="https://html5up.net">HTML5 UP</a>
+                <li><a href="https://github.com/half-duplex/hugo-arcana">Theme</a>
+        </ul>
+    </div>
+</div>
+</div><script src="/auditory-eeg-challenge-2024/js/jquery.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/jquery.dropotron.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/browser.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/breakpoints.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/util.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/main.js"></script>
+</body>
+</html>

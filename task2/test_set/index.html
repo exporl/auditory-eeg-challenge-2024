@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+
+<title>Test Set Task 2 | ICASSP 2024: Auditory EEG challenge</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="/auditory-eeg-challenge-2024/style.css" />
+<meta property="og:title" content="Test Set Task 2" />
+<meta property="og:description" content="description of the test set for task 2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://exporl.github.io/auditory-eeg-challenge-2024/task2/test_set/" /><meta property="article:section" content="task2" />
+
+
+
+</head>
+    <body class="is-preload">
+        <div id="page-wrapper"><div id="header">
+    <h1><a href="https://exporl.github.io/auditory-eeg-challenge-2024/" id="logo">
+        Auditory EEG Challenge - ICASSP 2024
+    </a></h1>
+
+    <nav id="nav">
+        <ul>
+                <li class="">
+                    <a href="/auditory-eeg-challenge-2024/">Home</a>
+                <li class="">
+                    <a href="/auditory-eeg-challenge-2024/dataset/">Dataset</a>
+                <li class="">
+                    <a href="/auditory-eeg-challenge-2024/registration/">Registration</a>
+                <li class="">
+                    <a href="#">Task 1: Match-Mismatch</a><ul>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task1/description">description</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task1/test_set">test set</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task1/leaderboard">leaderboard</a>
+                    </ul>
+                <li class="">
+                    <a href="#">Task 2: Regression</a><ul>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task2/description">description</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task2/test_set">test set</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task2/leaderboard">leaderboard</a>
+                    </ul>
+        </ul>
+    </nav>
+</div>
+
+            <section class="wrapper style1">
+                <div class="container">
+                    
+
+                        <div class="">
+                            <div id="content">
+                                <article>
+    <header>
+        <h2>Test Set Task 2</h2>
+        <p>description of the test set for task 2</p>
+        
+        
+        <ul class="tags">
+</ul>
+
+    </header><hr>
+<h3 id="provided-test-data">Provided test data</h3>
+<p>The test data for this task can be downloaded from <a href="https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EppWDp36B6dHuujhaPEaDzkBHXyTe18mZhuiXyHdIOTcpQ?e=jXk9g9">here</a>.
+The password is the same one as provided for the training set.
+The directory contains the following items:</p>
+<ol>
+<li>
+<p><strong>Preprocessed EEG test samples</strong>:  The main directory contains 84 subjects&rsquo; test data in the format
+of subject_name.json. Note that there is no test data for sub-001. Each json file contains a python dictionary with samples
+IDs as keys and EEG segments of one minute as values. The preprocessed EEG segments are at 64 Hz sampling rate. You probably need
+to convert EEG segments from list to numpy array.</p>
+</li>
+<li>
+<p><strong>raw_eeg</strong>:
+We also provide the corresponding raw EEG files for each subject. If you prefer to have access
+to the raw EEG and do your own preprocessing, then you can use this directory. The json files in this directory have exactly
+the same format as of the preprocessed EEG files. Sampling rate of the raw EEG is 1024 Hz.</p>
+</li>
+</ol>
+<h3 id="expected-output">Expected Output</h3>
+<p>As an output, participants should upload a zip file, containing json files to <a href="https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EhUxPLaiLjBInBAHEY3NNmYBVZMF8W-FtHojulxtY0k7RQ">the following link</a></p>
+<p>The files should follow the following naming convention:</p>
+<p>task_2_group_<strong>group_name</strong>_submission _<strong>submission_number</strong>.zip</p>
+<p>where <strong>submission_number</strong> should be 1 for
+the first submission and can go up to 5. We will use the latest submission as the final submission, from which the ranking will be calculated. Groups that have not yet supplied their group name, should send a mail to the
+organisers where they specify their name. When uploading, you will be prompted to enter a name. Please enter the name of one of the officially registered participants.</p>
+<p>The json file(s) should contain the predicted labels for all EEG segments.Each entry in the submitted dictionary should be of the form (EEG ID) : (Reconstructed Envelope).</p>
+<p>A correlation value of 0 will be taken in case of absent EEG ID entries. The reconstructed envelope should be of dimensions 1 x 3840 (i.e., 60 seconds of data at the prescribed sample rate
+of 64 Hz).
+We provide the script <a href="https://github.com/exporl/auditory-eeg-challenge-2023-code/blob/main/task2_regression/experiments/predict_test.py">predict_test.py</a>, which loads a pretrained model, loops over all the data of the test set, predicts the output labels and returns json files
+in the correct format.</p>
+<p>For evaluation, we will calculate the mean correlation score per subject. Then, we will calculate the mean over all the subjects means for both
+test set 1 and test set 2 and add them to obtain a final <strong>score</strong>, which will be updated in the online leaderboard.</p>
+
+
+                                </article>
+                            </div>
+                        </div>
+
+                    
+                </div>
+            </section><div id="footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+
+    <ul class="icons">
+    </ul>
+
+    <div class="copyright">
+        <ul class="menu">
+            
+                <li>Design: <a href="https://html5up.net">HTML5 UP</a>
+                <li><a href="https://github.com/half-duplex/hugo-arcana">Theme</a>
+        </ul>
+    </div>
+</div>
+</div><script src="/auditory-eeg-challenge-2024/js/jquery.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/jquery.dropotron.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/browser.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/breakpoints.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/util.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/main.js"></script>
+</body>
+</html>

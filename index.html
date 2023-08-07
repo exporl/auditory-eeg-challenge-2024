@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+	<meta name="generator" content="Hugo 0.103.1" />
+
+<title>ICASSP 2024: Auditory EEG challenge</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="/auditory-eeg-challenge-2024/style.css" />
+<meta property="og:title" content="Home" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://exporl.github.io/auditory-eeg-challenge-2024/" />
+
+</head>
+    <body class="is-preload">
+        <div id="page-wrapper"><div id="header">
+    <h1><a href="https://exporl.github.io/auditory-eeg-challenge-2024/" id="logo">
+        Auditory EEG Challenge - ICASSP 2024
+    </a></h1>
+
+    <nav id="nav">
+        <ul>
+                <li class="current">
+                    <a href="/auditory-eeg-challenge-2024/">Home</a>
+                <li class="">
+                    <a href="/auditory-eeg-challenge-2024/dataset/">Dataset</a>
+                <li class="">
+                    <a href="/auditory-eeg-challenge-2024/registration/">Registration</a>
+                <li class="">
+                    <a href="#">Task 1: Match-Mismatch</a><ul>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task1/description">description</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task1/test_set">test set</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task1/leaderboard">leaderboard</a>
+                    </ul>
+                <li class="">
+                    <a href="#">Task 2: Regression</a><ul>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task2/description">description</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task2/test_set">test set</a>
+                        <li class="">
+                            <a href="/auditory-eeg-challenge-2024/task2/leaderboard">leaderboard</a>
+                    </ul>
+        </ul>
+    </nav>
+</div><section class="wrapper style2">
+    <div class="container">
+        <header class="major">
+            <h2>Auditory EEG decoding challenge</h2><p>This challenge focuses on establishing a relationship between measured brain activity (EEG) and an auditory stimulus</p>
+        </header>
+    </div>
+</section>
+<section class="wrapper style1">
+    <div class="container">
+        
+            <div class=""><h2 id="challenge-call">Challenge Call</h2>
+<p>Various neuroimaging techniques can be used to investigate how the brain processes sound.
+Electroencephalography (EEG) is popular because it is relatively easy to conduct and has a high temporal
+resolution. Besides fundamental neuroscience research, EEG-based measures of auditory processing in the
+brain are also helpful in detecting or diagnosing potential hearing loss. They enable differential diagnosis of
+populations that can otherwise not be tested, such as young children or people with mental disabilities. In
+addition, there is a growing field of research in which auditory attention is decoded from the brain, with
+potential applications in smart hearing aids.
+An increasingly popular method in these fields is to relate a person&rsquo;s electroencephalogram (EEG) to a
+feature of the natural speech signal they were listening to. This is typically done using linear regression
+to predict the EEG signal from the stimulus or to decode the stimulus from the EEG. Given the very low
+signal-to-noise ratio of the EEG, this is a challenging problem, and several non-linear methods have been
+proposed to improve upon the linear regression methods.
+In the Auditory-EEG challenge, teams will compete to build the best model to relate speech to EEG. We
+provide a large auditory EEG dataset containing data from 85 subjects who listen on average to 108 minutes
+of single-speaker stimuli for a total of 157 hours of data. We define two tasks:</p>
+<p><strong>Task 1 match-mismatch</strong>: given two segments of speech and a segment of EEG, which segment of speech
+matches the EEG?</p>
+<p><strong>Task 2 regression</strong>: reconstruct the speech envelope from the EEG.
+We provide the dataset, code for preprocessing the EEG and for creating commonly used stimulus
+representations, and two baseline methods.</p>
+<p>Teams can register by sending a mail to
+<a href="auditoryeegchallenge@kuleuven.be">auditoryeegchallenge@kuleuven.be</a> with the names of the team members, emails, and affiliations.
+The intellectual property (IP) is not transferred to the challenge organizers, i.e. if the code is shared/submitted, the participants remain
+the owners of their code.</p>
+</div>
+            <div class=""><h2 id="get-started">Get started</h2>
+<ol>
+<li>Send a mail to <a href="auditoryeegchallenge@kuleuven.be">auditoryeegchallenge@kuleuven.be</a> with the names of the team members, emails, and affiliations. You will receive a password to download the data</li>
+<li>Download the data from [https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi:10.48804/K3VSND](our official repository) or get the already zipped files from  <a href="https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EkaIjOmoPIRHmYLdLK8b2VQBY_2ouqNSnHHTHyRl3Zn-2w?e=KhX7d0">ICASSP-2023-eeg-decoding-challenge-dataset</a>
+<ul>
+<li><strong>split_data(.zip)</strong> contains already preprocessed, split and normalized data; ready for model training/evaluation. If you want to get started quickly, you can opt to only download this folder/zipfile.</li>
+<li><strong>preprocessed_eeg(.zip)</strong> and <strong>preprocessed_stimuli(.zip)</strong> contain preprocessed EEG and stimuli files ( speech envelope and mel spectrogram features) respectively. At this stage data is not yet split into different sets and not normalized. To go from this to the data in <strong>split_data.zip</strong>, you will have to run <em>task*/create_data/split_and_normalize.py</em> for the task you want to work on.</li>
+<li><strong>raw_eeg(_x.zip)</strong> and <strong>stimuli(.zip)</strong> contain the raw EEG and stimuli files. If you want to process the stimuli files, you can run <em>task*/create_data/speech_features.py</em>. Speech Envelope and/or mel spectrogram features will be stored in the processed_stimuli. Currently, no preprocessing code is made available to preprocess EEG, so you will have to write your own implementation or use the precomputed processed_eeg folder.</li>
+</ul>
+</li>
+</ol>
+<p>For more details concerning the dataset, we refer to <a href="https://www.biorxiv.org/content/10.1101/2023.07.24.550310v1">the dataset paper</a>.</p>
+<ol start="3">
+<li>Clone the starting code from our <a href="https://github.com/exporl/auditory-eeg-challenge-2023-code">github repository</a> and get started.
+The repository contains preprocessing code, as well as baseline models for each of the tasks.</li>
+</ol>
+</div>
+            <div class=""></div>
+            <div class=""><h2 id="organizers">Organizers</h2>
+<ul>
+<li>
+<p>Mohammad Jalilpour Monesi 1, 2  (<a href="mailto:mohammad.jalilpourmonesi@esat.kuleuven.be">mohammad.jalilpourmonesi@esat.kuleuven.be</a>)</p>
+</li>
+<li>
+<p>Lies Bollens 1, 2 (<a href="mailto:lies.bollens@esat.kuleuven.be">lies.bollens@esat.kuleuven.be</a>)</p>
+</li>
+<li>
+<p>Bernd Accou 1, 2</p>
+</li>
+<li>
+<p>Hugo Van hamme 1</p>
+</li>
+<li>
+<p>Tom Francart 2</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>KU Leuven, PSI, Dept. of Electrical engineering (ESAT), Leuven, Belgium</p>
+</li>
+<li>
+<p>KU Leuven, ExpORL, Dept. Neurosciences, Leuven, Belgium</p>
+</li>
+</ol>
+</div>
+    </div>
+</section>
+<section id="cta" class="wrapper style3">
+    <div class="container">
+        <header>
+            <h2>Are you ready?</h2>
+                <a href="task1" class="button">Get started with task 1</a>
+        </header>
+    </div>
+</section>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+
+    <ul class="icons">
+    </ul>
+
+    <div class="copyright">
+        <ul class="menu">
+            
+                <li>Design: <a href="https://html5up.net">HTML5 UP</a>
+                <li><a href="https://github.com/half-duplex/hugo-arcana">Theme</a>
+        </ul>
+    </div>
+</div>
+</div><script src="/auditory-eeg-challenge-2024/js/jquery.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/jquery.dropotron.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/browser.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/breakpoints.min.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/util.js"></script>
+<script src="/auditory-eeg-challenge-2024/js/main.js"></script>
+</body>
+</html>
