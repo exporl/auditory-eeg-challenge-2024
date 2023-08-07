@@ -1,4 +1,4 @@
-AUDEEG Challenge ICASSP 2023 Dataset
+AUDEEG Challenge ICASSP 2024 Dataset
 ============================
 Data for the [Auditory EEG Decoding challenge](https://exporl.github.io/auditory-eeg-challenge-2023/)
 
