@@ -8,8 +8,9 @@ weight: 80
 
 # Description
 
-Task 1 is a classification problem in a match-mismatch paradigm. Last year, the challenge was to select the matched stimulus
-segment among two. This year, we modify the paradigm to make it more challenging, by presenting  four or six inputs to the model: 
+Task 1 is a classification problem in a match-mismatch paradigm. Last year (ICASSP 2023 edition), the challenge was to select the matched stimulus
+segment among two candidates. This year, we modify the paradigm to make it more challenging, by presenting  four or six candidates to the model.  
+The complete input to the model is structured as follows:
 
 1) a segment of EEG, 
 2) the time-aligned speech stimulus (matched segment)
@@ -17,7 +18,7 @@ segment among two. This year, we modify the paradigm to make it more challenging
 
 The task of the model is to determine which of the input stimulus segments corresponds to the EEG. The performance metric is the classification accuracy (%).
 
-The input length of all (EEG, envelope) pairs is either 3s or 5s. We define the mismatched stimuli to be selected arbitrarily among windows from the same story after the signal was segmented.
+The segment length of all (EEG, envelope) pairs is either 3s or 5s. We define the mismatched stimuli to be selected arbitrarily among windows from the same story after the signal was chunked.
 Figure 2 contains an overview of the provided code and our recommended starting flow. We provide code to generate an envelope and
 mel spectrogram representation from the raw audio files. However, participants can freely perform audio processing and use their preferred
 representations.

@@ -6,9 +6,10 @@ description: "challenge organizers"
 
 
 ## Organizers
-- Mohammad Jalilpour Monesi 1, 2  (mohammad.jalilpourmonesi@esat.kuleuven.be)
 
 - Lies Bollens 1, 2 (lies.bollens@esat.kuleuven.be)
+
+- Corentin Puffay 1, 2 (corentin.puffay@kuleuven.be)
 
 - Bernd Accou 1, 2
 
