@@ -95,9 +95,8 @@ Guidelines for participants Participants can submit their predictions up to five
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task1/description/</guid>
-      <description>Schematic overview of the match-mismatch task Description Task 1 is a classification problem in a match-mismatch paradigm. In this paradigm, three inputs are presented to the model:
-a segment of EEG, the time-aligned speech stimulus (match) an imposter stimulus (mismatch) The task of the model is to determine which of the input stimulus segments corresponds to the EEG. The performance metric is the classification accuracy (%).
-The input length of all (EEG, envelope) pairs is 3s.</description>
+      <description>Schematic overview of the match-mismatch task Description Task 1 is a classification problem in a match-mismatch paradigm. In this paradigm, four or six inputs are presented to the model:
+a segment of EEG, the time-aligned speech stimulus (matched segment) two or four imposter stimuli (mismatched segments) The task of the model is to determine which of the input stimulus segments corresponds to the EEG. The performance metric is the classification accuracy (%).</description>
     </item>
     
     <item>
