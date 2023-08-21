@@ -1,6 +1,6 @@
 ---
 title: "Task 1: Match-mismatch"
-description: "given and EEG segment and three or five stimuli, classify which one of the input segments corresponds to the EEG"
+description: "given an EEG segment and X stimulus segments, classify which one of them corresponds to the EEG"
 menu: task1
 weight: 80
 ---
@@ -8,21 +8,23 @@ weight: 80
 
 # Description
 
-Task 1 is a classification problem in a match-mismatch paradigm. In this paradigm, four or six inputs are presented to the model: 
+Task 1 is a classification problem in a match-mismatch paradigm. Last year, the challenge was to select the matched stimulus
+segment among two. This year, we modify the paradigm to make it more challenging, by presenting  four or six inputs to the model: 
+
 1) a segment of EEG, 
 2) the time-aligned speech stimulus (matched segment)
 3) two or four imposter stimuli (mismatched segments) 
 
-The task of the model is to determine which of the input stimulus segments corresponds to the EEG. The performance metric is the classification accuracy (%). 
+The task of the model is to determine which of the input stimulus segments corresponds to the EEG. The performance metric is the classification accuracy (%).
 
-The input length of all (EEG, envelope) pairs is either 3s or 5s. We define the mismatched stimuli to be selected arbitrarily among windows after the signal was segmented.
+The input length of all (EEG, envelope) pairs is either 3s or 5s. We define the mismatched stimuli to be selected arbitrarily among windows from the same story after the signal was segmented.
 Figure 2 contains an overview of the provided code and our recommended starting flow. We provide code to generate an envelope and
 mel spectrogram representation from the raw audio files. However, participants can freely perform audio processing and use their preferred
 representations.
 
 In order to use the data in the classification paradigm, we implement and suggest the following methods. First, we present each EEG
-segment three times (five times for the four mismatched segments case) to the model: (EEG, matched stimulus, mismatched stimulus 1, mismatched stimulus 2, output label [1, 0, 0]) µ
-, (EEG, mismatched stimulus 1, matched, mismatched stimulus 2, output label [0, 1, 0]), and (EEG, mismatched stimulus 2, mismatched stimulus 1, matched, output label [0, 0, 1]) . 
+segment three times (five times for the four mismatched segments case) to the model: (EEG, matched stimulus, mismatched stimulus 1, mismatched stimulus 2, output label [1, 0, 0]) 
+, (EEG, mismatched stimulus 1, matched stimulus, mismatched stimulus 2, output label [0, 1, 0]), and (EEG, mismatched stimulus 2, mismatched stimulus 1, matched stimulus, output label [0, 0, 1]) . 
 Second, we make sure that a mismatched stimuli segments are also a matched segment with another EEG segment.
 A way to do this is to ensure that the shift when windowing is dividable by the spacing between the matched and mismatched
 segment. Failing to follow these suggestions is likely to result in models simply remembering the training samples and thus failing to
@@ -36,10 +38,10 @@ The code for this task can be found on our [github repository](https://github.co
 We include a [dilated convolutional network](https://ieeexplore.ieee.org/abstract/document/9287417?casa_token=t5BXK65duSYAAAAA:10B8PKULBXtxlxTZ6C_w1KoBIsELHfnkj4-QQ8EogEitMLnYKJmXcmZUabLF1AwyiO-qU3f-KKuc )  as a baseline for task 1. The dilated convolutional network consists of four steps. First, the
 EEG channels are combined, from 64 to 8, using a 1D convolutional layer with a kernel size of 1 and a filter size of 8. Second, there are
 N dilated convolutional layers with a kernel size of K and 16 filters. These N convolutional layers are applied to both EEG and envelope
-stimulus segments. After each convolutional layer, a rectified linear unit (ReLU) is applied. Both stimulus envelope segments share the
+stimulus segments. After each convolutional layer, a rectified linear unit (ReLU) is applied. All stimulus envelope segments share the
 weights for the convolutional layers. After these non-linear transformations, the EEG is compared to each stimulus envelopes, using cosine
-similarity. Finally, each obtained similarity matrices are fed to an individual neural, with a linear activation function. The resulting output 
-are fed into a non-trainable softmax layer which selects the matching segment. 
+similarity. Finally, each obtained similarity matrices are fed to an individual neuron, with a linear activation function. The resulting outputs 
+(corresponding to the number of stimulus segments) are fed into a non-trainable softmax layer which selects the matching segment. 
 When applied to the training and test sets of the challenge for 3~s segments, a performance of approximately 62% and 48% correct is obtained when 
 using two and four mismatched segments respectively.
 
