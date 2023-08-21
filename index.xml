@@ -70,8 +70,8 @@ HappyQuoka (0.1589) TheBrainwaveBandits (0.1535) </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://exporl.github.io/auditory-eeg-challenge-2024/homepage_sections/organizers/</guid>
-      <description>Organizers Mohammad Jalilpour Monesi 1, 2 (mohammad.jalilpourmonesi@esat.kuleuven.be)
-Lies Bollens 1, 2 (lies.bollens@esat.kuleuven.be)
+      <description>Organizers Lies Bollens 1, 2 (lies.bollens@esat.kuleuven.be)
+Corentin Puffay 1, 2 (corentin.puffay@kuleuven.be)
 Bernd Accou 1, 2
 Hugo Van hamme 1
 Tom Francart 2
@@ -95,7 +95,8 @@ Guidelines for participants Participants can submit their predictions up to five
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task1/description/</guid>
-      <description>Schematic overview of the match-mismatch task Description Task 1 is a classification problem in a match-mismatch paradigm. Last year, the challenge was to select the matched stimulus segment among two. This year, we modify the paradigm to make it more challenging, by presenting four or six inputs to the model:
+      <description>Schematic overview of the match-mismatch task Description Task 1 is a classification problem in a match-mismatch paradigm. Last year (ICASSP 2023 edition), the challenge was to select the matched stimulus segment among two candidates. This year, we modify the paradigm to make it more challenging, by presenting four or six candidates to the model.
+The complete input to the model is structured as follows:
 a segment of EEG, the time-aligned speech stimulus (matched segment) two or four imposter stimuli (mismatched segments) The task of the model is to determine which of the input stimulus segments corresponds to the EEG.</description>
     </item>
     
