@@ -59,7 +59,8 @@ For test set 2, some stimuli have already appeared in the training set, but the 
 
 For these test sets, we provide inputs in the form: (EEG, stimulus 1, stimulus 2 and stimulus 3), with a length of 3 (or 5) seconds, each with a unique identifier
 and a subject identifier. As an output, participants should submit a json dictionary file to an online form on our website which contains the
-predicted label for all EEG segments. Each entry in the submitted dictionary should be of the form **(EEG ID) : (label)**. The label is 0 if stimulus 1 matches EEG and 1 if stimulus 2 matches EEG. In case of absent EEG ID entries, the sample will be assigned the wrong label. Labels should be either 0 or 1.
+predicted label for all EEG segments. Each entry in the submitted dictionary should be of the form **(EEG ID) : (label)**. The label is [1, 0, 0] if stimulus 1 matches EEG, [0, 1, 0] if stimulus 2 matches EEG, and [0, 0, 1] if stimulus 3 matches EEG. 
+In case of absent EEG ID entries, the sample will be assigned the wrong label.
 
 
 For evaluation, we will calculate the mean accuracy score per subject. Then, we will calculate the mean over all the subjects means for both 
