@@ -12,13 +12,13 @@ auditoryeegchallenge@kuleuven.be with the names of the team members, emails, and
 
 # Guidelines for participants
 
-- Participants can submit their predictions up to five times. The latest received submission counts as the official score.
+- Participants can submit their predictions up to two times. The latest received submission counts as the official score.
 - The Audio-EEG challenge features two separate tasks. Participants can submit to either one track or both. Results should be accom-
 panied by a 2-page paper describing the proposed method
-- The top 5 ranked teams will be invited to submit a 2-page paper, to be presented at ICASSP-2023, which should be submitted before
+- The top 5 ranked teams will be invited to submit a 2-page paper, to be presented at ICASSP-2024, which should be submitted before
 the camera-ready deadline. In addition, they will receive an invitation to submit a full paper about their work to the IEEE Open Journal
 of Signal Processing (OJ-SP). Submitted OJ-SP papers will undergo peer review by the OJ-SP Editorial Board in collaboration with
-the IEEE SPS CDC committee and ICASSP-2023 GC Chairs.
+the IEEE SPS CDC committee and ICASSP-2024 GC Chairs.
 - Winners will be selected according to the best performance for every single task. One winner for each task will be selected
 - The top 5 teams will be determined as follows: the top 2 teams for track 1 and the top two teams for track 2. The fifth team will be
 chosen as the third-ranking team in the task with the most submissions.
@@ -32,7 +32,7 @@ labels/predictions.
 - Additionally, we encourage all teams to publically share their code at the end of the contest. 
 - The use of external data (both training data and/or pretrained models) is allowed, on the following conditions: 
     1. The datasets, or pretrained models, should be publicly and freely available. Participants wishing to use data/models that are publicly available, but not free, should contact the organisers to discuss if the data can be used. 
-    2. Only datasets/pretrained models that have been made publicly available before the start of this challenge, i.e. **put online before November 21, 2022**, are allowed to be used. 
+    2. Only datasets/pretrained models that have been made publicly available before the start of this challenge, i.e. **put online before August 30, 2023**, are allowed to be used. 
     3. Upon submission of their results, teams should explicitly mention which extra datasets/model weights they have used to generate their predictions.
     4. You can still use a publicly available pretrained model even if the data which the model is trained on is not open to public.
 - Participants can fine-tune their model on each test subject to have a subject specific model (this can only be done for subjects that are also present in the train set).

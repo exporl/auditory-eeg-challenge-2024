@@ -6,7 +6,7 @@ weight: 80
 ---
 
 
-The training set can be downloaded here, using the password which will be provided to all registered teams: [ICASSP-2023-eeg-decoding-challenge-dataset](https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EkaIjOmoPIRHmYLdLK8b2VQBY_2ouqNSnHHTHyRl3Zn-2w?e=KhX7d0)
+The training set can be downloaded here, using the password which will be provided to all registered teams: [ICASSP-2024-eeg-decoding-challenge-dataset](https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EkaIjOmoPIRHmYLdLK8b2VQBY_2ouqNSnHHTHyRl3Zn-2w?e=KhX7d0)
 
 For more details concerning the dataset, we refer to [the dataset paper](https://www.biorxiv.org/content/10.1101/2023.07.24.550310v1).
  
@@ -29,7 +29,7 @@ electrode (CMS) and current return path (DRL). The data is measured at a samplin
 the spatial resolution is low, with only 64 electrodes for billions of neurons. All 64 electrodes are placed according to international 10-20
 standards.
 
-The dataset contains data from 85 young, normal-hearing subjects (all hearing thresholds <= 25 dB Hl), with Dutch as their native
+The dataset contains data from 105 young, normal-hearing subjects (all hearing thresholds <= 25 dB Hl), with Dutch as their native
 language. Subjects indicating any neurological or hearing-related medical history were excluded from the study. The study was approved by
 the Medical Ethics Committee UZ KU Leuven/Research (KU Leuven, Belgium). All identifiable subject information has been removed from the dataset. 
 
@@ -43,40 +43,19 @@ longer than 15 minutes. In this case, they are split into two trials presented c
 
 
 
-# Training set
-The training set contains EEG responses from 71 subjects. These subjects are numbered from sub-01 to sub-071. As shown in the figure above, each
-subject listens to between 6 and 9 trials, each of around 15 minutes in length. Due to measuring errors, not all trials for all subjects have been
-included in the training set. Subjects are divided into groups, depending on which stimuli they listened to. Each such group contains between
-2 and 27 subjects. All subjects of all groups listen to a reference story, Audiobook 1.
 
-In total, the training set contains 508 trials, from 71 subjects, using 57 different stimuli. The total amount of minutes of data amounts to
-7216 minutes (120 hours). Both tasks share the training set. Data is structured in a folder per subject, and the trials are named chronologically. 
-Each EEG trial file contains a pointer to the stimulus used to generate the specific brain EEG response and reference
-to the subject identifier. The auditory stimuli are provided in a separate folder stimuli.
+The dataset contains data from 105 young, normal-hearing subjects (all hearing thresholds <= 25 dB Hl), with Dutch as their native language. Subjects indicating any neurological or hearing-related medical history were excluded from the study. The study was approved by the Medical Ethics Committee UZ KU Leuven/Research (KU Leuven, Belgium). All identifiable subject information has been removed from the dataset.
 
+Each subject listened to between 8 and 10 trials, each of approximately 15 minutes in length. The order of the trials is randomized between participants. All the stimuli are single-speaker stories spoken in Flemish (Belgian Dutch) by a native Flemish speaker. We vary the stimuli between subjects ( between each 2 to 26 subjects) to have a wide range of unique speech material. The stimuli are either podcast or audiobooks. Some audiobooks are longer than 15 minutes. In this case, they are split into two trials presented consecutively to the subject.
 
-# Test set 
-The test set consists of two parts: held-out stories and held-out subjects. These sets are split into two parts, ensuring that the test sets of the
-two tasks do not overlap. Both test sets will be released to the participants on January 6, 2023. However, the ground truth labels will only be available to the public after the competition is
-over.
-- **Test Set 1 (held-out stories)** contains data for the 71 subjects seen in training. We held out one story for each group of subjects, which never
-occurs in the training set, amounting to a total of 944 minutes.
-- **Test Set 2 (held-out subjects)** contains data for 14 subjects (sub-72 to sub-85) that are not in the training set, further referred to as held-out
-subjects, for a total of 1260 minutes. The data for these subjects were acquired using the same protocol as for the other 71 subjects. 
- 
+## Training set
+The training set contains data from 85 subjects and is equal to the training + test set from the ICASSP 2023 Auditory EEG competition. In total, the training set contains 655 trials( of 15 minutes each) , from 85 subjects, using 72 different stimuli, for a total of 9420 minutes ( 157 hours).
 
-# Preprocessing 
+## Test set
+The test set contains data from 20 subjects, which have been newly measured for the ICASSP 2024 auditory EEG competition. All subjects, as well as the stimuli, are never seen in the training set. The test set contains a total of 20 subjects, 15 different stimuli, for a total of 2315 minutes of data ( 38 hours).
+The test sets will be released to the public on November 15,2023.
 
-We provide two versions of the dataset. The first data version is the raw EEG data, which has been downsampled from 8192 Hz to 1024 Hz.
-The second version of the dataset has been preprocessed in MATLAB. First, the EEG signal was downsampled from 8192 Hz to 1024 Hz,
-and artefacts were removed using a multichannel Wiener filter. Then, the EEG signal was re-referenced to a common average. Finally, the
-EEG signal was downsampled to 64 Hz. These steps are commonly used in EEG signal processing, and the preprocessed version can be used
-directly in machine learning models. However, challenge participants are free to perform their own preprocessing on both versions of the
-datasets.
-For the regression task, we define a specific version of the envelope, which will be used for evaluating the final outputs. We estimate the envelope
-using a gammatone filter bank with 28 subbands, spaced by equivalent bandwidth with center frequencies of 50 Hz to 5 kHz. Subsequently,
-the absolute value of each sample in the filters is taken, followed by exponentiation with 0.6. Then, all subbands are averaged to obtain one
-speech envelope. Finally, the resulting envelope is downsampled to 64 Hz. We provide code to create these envelope representations.
+We provide two different versions of the dataset. The first data version is the raw EEG data, which has been downsampled from 8192 Hz to 1024 Hz. The second version of the data has been preprocessed ( we provide code to replicate these steps) First, the artefacts are removed, using a multichannel Wiener filter. Then, the EEG signal is re-referenced to a common average and finally, the EEG signal is downsampled to 64 Hz. hese steps are commonly used in EEG signal processing, and the preprocessed version can be used directly in machine learning models. However, challenge participants are free to perform their own preprocessing on both versions of the datasets.
 
 # Ethics   
 Before commencing the EEG experiments, all participants read and signed an informed consent form approved by the
