@@ -12,7 +12,7 @@ auditoryeegchallenge@kuleuven.be with the names of the team members, emails, and
 
 # Guidelines for participants
 
-- Participants can submit their predictions up to two times. The latest received submission counts as the official score.
+- Participants can submit their predictions up to **two** times. The latest received submission counts as the official score.
 - The Audio-EEG challenge features two separate tasks. Participants can submit to either one track or both. Results should be accom-
 panied by a 2-page paper describing the proposed method
 - The top 5 ranked teams will be invited to submit a 2-page paper, to be presented at ICASSP-2024, which should be submitted before
@@ -35,4 +35,4 @@ labels/predictions.
     2. Only datasets/pretrained models that have been made publicly available before the start of this challenge, i.e. **put online before August 30, 2023**, are allowed to be used. 
     3. Upon submission of their results, teams should explicitly mention which extra datasets/model weights they have used to generate their predictions.
     4. You can still use a publicly available pretrained model even if the data which the model is trained on is not open to public.
-- Participants can fine-tune their model on each test subject to have a subject specific model (this can only be done for subjects that are also present in the train set).
+

@@ -6,9 +6,9 @@ weight: 80
 ---
 
 
-The training set can be downloaded here, using the password which will be provided to all registered teams: [ICASSP-2024-eeg-decoding-challenge-dataset](https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EkaIjOmoPIRHmYLdLK8b2VQBY_2ouqNSnHHTHyRl3Zn-2w?e=KhX7d0)
+The training set can be downloaded here, using the password which will be provided to all registered teams: [ICASSP-2024-eeg-decoding-challenge-dataset](https://homes.esat.kuleuven.be/~lbollens)
 
-For more details concerning the dataset, we refer to [the dataset paper](https://www.biorxiv.org/content/10.1101/2023.07.24.550310v1).
+For more details concerning the dataset, we refer to [our dataset paper](https://www.biorxiv.org/content/10.1101/2023.07.24.550310v1).
  
 
 
@@ -55,7 +55,7 @@ The training set contains data from 85 subjects and is equal to the training + t
 The test set contains data from 20 subjects, which have been newly measured for the ICASSP 2024 auditory EEG competition. All subjects, as well as the stimuli, are never seen in the training set. The test set contains a total of 20 subjects, 15 different stimuli, for a total of 2315 minutes of data ( 38 hours).
 The test sets will be released to the public on November 15,2023.
 
-We provide two different versions of the dataset. The first data version is the raw EEG data, which has been downsampled from 8192 Hz to 1024 Hz. The second version of the data has been preprocessed ( we provide code to replicate these steps) First, the artefacts are removed, using a multichannel Wiener filter. Then, the EEG signal is re-referenced to a common average and finally, the EEG signal is downsampled to 64 Hz. hese steps are commonly used in EEG signal processing, and the preprocessed version can be used directly in machine learning models. However, challenge participants are free to perform their own preprocessing on both versions of the datasets.
+We provide two different versions of the dataset. The first data version is the raw EEG data, which has been downsampled from 8192 Hz to 1024 Hz and is stored in the BIDS format. The second version of the data has been preprocessed ( we provide code to replicate these steps) First, the artefacts are removed, using a multichannel Wiener filter. Then, the EEG signal is re-referenced to a common average and finally, the EEG signal is downsampled to 64 Hz. These steps are commonly used in EEG signal processing, and the preprocessed version can be used directly in machine learning models. However, challenge participants are free to perform their own preprocessing on both versions of the datasets.
 
 # Ethics   
 Before commencing the EEG experiments, all participants read and signed an informed consent form approved by the

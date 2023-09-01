@@ -23,7 +23,7 @@ In the Auditory-EEG challenge, teams will compete to build the best model to rel
 provide a large auditory EEG dataset containing data from 105 subjects who listen on average to 108 minutes
 of single-speaker stimuli for a total of around 200 hours of data. We define two tasks:
 
-**Task 1 match-mismatch**: given 3 or 5 segments of speech and a segment of EEG, which segment of speech
+**Task 1 match-mismatch**: given 5 segments of speech and a segment of EEG, which segment of speech
 matches the EEG?
 
 **Task 2 regression**: reconstruct the mel spectorgram from the EEG.
