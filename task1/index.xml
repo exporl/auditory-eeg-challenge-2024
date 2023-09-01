@@ -12,8 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task1/leaderboard/</guid>
-      <description> All results Group nameSubmission number Within subjects mean Within subjects std Heldout subjects mean Heldout subjects std total score Challenge winners (top 3 teams):
-UnderDawgs (82.13 %) HyperAttention (79.05 %) MINWPU (78.94 %) </description>
+      <description> All results Group nameSubmission number Within subjects mean Within subjects std Heldout subjects mean Heldout subjects std total score </description>
     </item>
     
     <item>
@@ -22,9 +21,9 @@ UnderDawgs (82.13 %) HyperAttention (79.05 %) MINWPU (78.94 %) </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task1/description/</guid>
-      <description>Schematic overview of the match-mismatch task Description Task 1 is a classification problem in a match-mismatch paradigm. Last year (ICASSP 2023 edition), the challenge was to select the matched stimulus segment among two candidates. This year, we modify the paradigm to make it more challenging, by presenting four or six candidates to the model.
+      <description>Schematic overview of the match-mismatch task Description Task 1 is a classification problem in a match-mismatch paradigm. Last year (ICASSP 2023 edition), the challenge was to select the matched stimulus segment among two candidates. This year, we modify the paradigm to make it more challenging, by presenting five candidates to the model.
 The complete input to the model is structured as follows:
-a segment of EEG, the time-aligned speech stimulus (matched segment) two or four imposter stimuli (mismatched segments) The task of the model is to determine which of the input stimulus segments corresponds to the EEG.</description>
+a segment of EEG, the time-aligned speech stimulus (matched segment) four imposter stimuli (mismatched segments) The task of the model is to determine which of the input stimulus segments corresponds to the EEG.</description>
     </item>
     
   </channel>

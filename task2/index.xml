@@ -21,8 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task2/description/</guid>
-      <description>Schematic overview of the regression task Description Task 2 is a regression problem: To reconstruct the stimulus from the EEG. After reconstruction, a metric to measure the similarity is used between the reconstructed stimulus and the original stimulus. In this task, we use the Pearson correlation.
-For this task, the stimulus representation is defined as the mel spectrogram, as described in the preprocessing section and as defined by the provided code.</description>
+      <description>Schematic overview of the regression task Description Task 2 is a regression problem: To reconstruct the mel spectrogram from the EEG. Compared to the challenge from last year, this objective is slightly more difficult, as it contains more speech information than the envelope. We define a mel spectorgram with 10 subbands, distributed between 0 and 5000 Hz, calculated by the librosa library ( see preprocessing_code/mel.py). After reconstruction, a metric to measure the similarity is used between the reconstructed mel and the original mel.</description>
     </item>
     
   </channel>
