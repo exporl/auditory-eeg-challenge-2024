@@ -4,6 +4,9 @@ weight: 10
 description: "General description"
 ---
 
+## Test set update
+
+The test set will be released soon ( at the lates by the 28th of November). Information about the test set, where to download it, and how to send in your submissions will appear on this website.  
 
 ## Challenge Call 
 
