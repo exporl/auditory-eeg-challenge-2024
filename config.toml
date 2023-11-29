@@ -16,6 +16,12 @@ theme = ["hugo-chart", "arcana"]
         weight = 1
     [[menu.main]]
         parent = "task1"
+        identifier="test_set_1"
+        name = "test_set"
+        url="/task1/test_set"
+        weight = 2
+    [[menu.main]]
+        parent = "task1"
         identifier="leaderboard_1"
         name = "leaderboard"
         url="/task1/leaderboard"
@@ -30,6 +36,12 @@ theme = ["hugo-chart", "arcana"]
         name = "description"
         url= "/task2/description"
         weight = 1
+     [[menu.main]]
+        parent = "task2"
+        identifier="test_set_2"
+        name = "test_set"
+        url="/task2/test_set"
+        weight = 2
     [[menu.main]]
         parent = "task2"
         identifier="leaderboard_2"

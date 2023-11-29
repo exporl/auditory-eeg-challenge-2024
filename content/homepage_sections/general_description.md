@@ -6,7 +6,10 @@ description: "General description"
 
 ## Test set update
 
-The test set will be released soon ( at the latest by the 28th of November). Information about the test set, where to download it, and how to send in your submissions will appear on this website.  
+The test set is now online. 
+Downloading the test set: [link](https://homes.esat.kuleuven.be/~lbollens/sparrkulee/test_set).
+There is a separate folder for each task. For more information, look at the specific descriptions, 
+for either Task 1 or Task 2.
 
 ## Challenge Call 
 
