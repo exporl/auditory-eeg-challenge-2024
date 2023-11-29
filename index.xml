@@ -12,8 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://exporl.github.io/auditory-eeg-challenge-2024/homepage_sections/general_description/</guid>
-      <description>Test set update The test set will be released soon ( at the latest by the 28th of November). Information about the test set, where to download it, and how to send in your submissions will appear on this website.
-Challenge Call Various neuroimaging techniques can be used to investigate how the brain processes sound. Electroencephalography (EEG) is popular because it is relatively easy to conduct and has a high temporal resolution.</description>
+      <description>Test set update The test set is now online. Downloading the test set: link. There is a separate folder for each task. For more information, look at the specific descriptions, for either Task 1 or Task 2.
+Challenge Call Various neuroimaging techniques can be used to investigate how the brain processes sound. Electroencephalography (EEG) is popular because it is relatively easy to conduct and has a high temporal resolution. Besides fundamental neuroscience research, EEG-based measures of auditory processing in the brain are also helpful in detecting or diagnosing potential hearing loss.</description>
     </item>
     
     <item>
@@ -106,6 +106,26 @@ a segment of EEG, the time-aligned speech stimulus (matched segment) four impost
       
       <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task2/description/</guid>
       <description>Schematic overview of the regression task Description Task 2 is a regression problem: To reconstruct the mel spectrogram from the EEG. Compared to the challenge from last year, this objective is slightly more difficult, as it contains more speech information than the envelope. We define a mel spectorgram with 10 subbands, distributed between 0 and 5000 Hz, calculated by the librosa library ( see preprocessing_code/mel.py). After reconstruction, a metric to measure the similarity is used between the reconstructed mel and the original mel.</description>
+    </item>
+    
+    <item>
+      <title>Test Set Task 1</title>
+      <link>https://exporl.github.io/auditory-eeg-challenge-2024/task1/test_set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task1/test_set/</guid>
+      <description>Provided test dataset The test data for this task can be downloaded from here. The password is the same one as provided for the training set. The directory contains following items:
+sub-x_mapping.json: These files link the EEG files to the possible stimuli. Since you are free to use whatever version of the data you want, these json files contain keys to the EEG files and the corresponding stimuli. Each entry in the json file is of the form: (segment_ID) : {&amp;rsquo;eeg&amp;rsquo;: eeg_id, &amp;lsquo;stimulus&amp;rsquo;: (stimulus_0_id, stimulus_1_id, stimulus_2_id, stimulus_3_id, stimulus_4_id)}.</description>
+    </item>
+    
+    <item>
+      <title>Test Set Task 2</title>
+      <link>https://exporl.github.io/auditory-eeg-challenge-2024/task2/test_set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task2/test_set/</guid>
+      <description>Provided test dataset The test data for this task can be downloaded from here. The password is the same one as provided for the training set. The directory contains following items:
+sub-x_mapping.json: These files link the EEG files to the possible stimuli. Since you are free to use whatever version of the data you want, these json files contain keys to the EEG files. Each entry in the json file is of the form: (segment_ID) : {&amp;rsquo;eeg&amp;rsquo;: eeg_id}.</description>
     </item>
     
   </channel>

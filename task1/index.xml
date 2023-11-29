@@ -26,5 +26,15 @@ The complete input to the model is structured as follows:
 a segment of EEG, the time-aligned speech stimulus (matched segment) four imposter stimuli (mismatched segments) The task of the model is to determine which of the input stimulus segments corresponds to the EEG.</description>
     </item>
     
+    <item>
+      <title>Test Set Task 1</title>
+      <link>https://exporl.github.io/auditory-eeg-challenge-2024/task1/test_set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task1/test_set/</guid>
+      <description>Provided test dataset The test data for this task can be downloaded from here. The password is the same one as provided for the training set. The directory contains following items:
+sub-x_mapping.json: These files link the EEG files to the possible stimuli. Since you are free to use whatever version of the data you want, these json files contain keys to the EEG files and the corresponding stimuli. Each entry in the json file is of the form: (segment_ID) : {&amp;rsquo;eeg&amp;rsquo;: eeg_id, &amp;lsquo;stimulus&amp;rsquo;: (stimulus_0_id, stimulus_1_id, stimulus_2_id, stimulus_3_id, stimulus_4_id)}.</description>
+    </item>
+    
   </channel>
 </rss>
