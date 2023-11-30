@@ -72,6 +72,8 @@
          (e) => {return e[1]['per_subject']}
      );
 
+     console.log(withinResults);
+
 
     var ctx = document.getElementById('{{ $id }}').getContext('2d');
     var options = {
@@ -133,7 +135,7 @@
         padding: 10,
         itemRadius: 0,
         data: withinResults.slice(10)
-      }]
+      },]
     };
     var  ctx = document.getElementById("canvas").getContext("2d");
     new Chart(ctx, {
