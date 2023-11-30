@@ -72,6 +72,10 @@
          (e) => {return e[1]['per_subject']}
      );
 
+         var heldoutResults = items.map(
+         (e) => {return e[1]['per_subject']}
+     );
+
      console.log(withinResults);
 
 
@@ -122,12 +126,11 @@
     };
     new Chart(ctx, options);
 
-
-    const boxplotData = {
+ const boxplotData = {
       // define label tree
       labels: groupNames.slice(10),
       datasets: [{
-        label: 'Test set: held-out subjects',
+        label: 'Test set ',
         backgroundColor: 'rgba(255,0,0,0.5)',
         borderColor: 'red',
         borderWidth: 1,
@@ -135,7 +138,16 @@
         padding: 10,
         itemRadius: 0,
         data: withinResults.slice(10)
-      },]
+      }, {
+        label: 'Test set',
+        backgroundColor:  'rgba(0,0,255,0.5)',
+        borderColor: 'blue',
+        borderWidth: 1,
+        outlierColor: 'rgba(0,0,255,0.5)',
+        padding: 10,
+        itemRadius: 0,
+        data:heldoutResults.slice(10)
+      }]
     };
     var  ctx = document.getElementById("canvas").getContext("2d");
     new Chart(ctx, {
@@ -172,7 +184,6 @@
 
     }
     });
-
 
     // data for table with all results
      const tmpUrl2 = "../scores_task1_means.json";
