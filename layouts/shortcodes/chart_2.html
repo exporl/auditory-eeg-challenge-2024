@@ -132,7 +132,7 @@
 
     const boxplotData = {
       // define label tree
-      labels: groupNames.slice(4),
+      labels: groupNames,
       datasets: [{
         label: 'Test set: held-out subjects',
         backgroundColor: 'rgba(255,0,0,0.5)',
@@ -141,7 +141,7 @@
         outlierColor: 'rgba(255,0,0,0.5)',
         padding: 10,
         itemRadius: 0,
-        data: withinResults.slice(4)
+        data: withinResults
       }]
     };
     var  ctx = document.getElementById("canvas").getContext("2d");
