@@ -29,10 +29,18 @@
   <br>
   <table>
     <thead><tr><td><b>Group name</b></td><td><b>Submission number</b></td>
-    <td><b>Within subjects mean </b></td>
-    <td><b>Within subjects std</b></td>
-    <td><b>Heldout subjects mean</b></td>
-    <td><b>Heldout subjects std</b></td>
+    <td><b>subjects mean </b></td>
+    <td><b>subjects std</b></td>
+    <td><b>Band 0 mean</b></td>
+    <td><b>Band 1 mean</b></td>
+    <td><b>Band 2 mean</b></td>
+    <td><b>Band 3 mean</b></td>
+    <td><b>Band 4 mean</b></td>
+    <td><b>Band 5 mean</b></td>
+    <td><b>Band 6 mean</b></td>
+    <td><b>Band 7 mean</b></td>
+    <td><b>Band 8 mean</b></td>
+    <td><b>Band 9 mean</b></td>
     <td><b>total score</b></td></tr></thead>
     <tr id="root"></tr>
   </table>
@@ -69,12 +77,9 @@
      );
 
      var withinResults = items.map(
-         (e) => {return e[1]['within']}
+         (e) => {return e[1]['per_subject']}
      );
 
-     var heldoutResults = items.map(
-         (e) => {return e[1]['heldout']}
-     );
 
 
     var ctx = document.getElementById('{{ $id }}').getContext('2d');
@@ -129,7 +134,7 @@
       // define label tree
       labels: groupNames.slice(4),
       datasets: [{
-        label: 'Test set 1: held-out stories',
+        label: 'Test set: held-out subjects',
         backgroundColor: 'rgba(255,0,0,0.5)',
         borderColor: 'red',
         borderWidth: 1,
@@ -137,15 +142,6 @@
         padding: 10,
         itemRadius: 0,
         data: withinResults.slice(4)
-      }, {
-        label: 'Test set 2: held-out subjects',
-        backgroundColor:  'rgba(0,0,255,0.5)',
-        borderColor: 'blue',
-        borderWidth: 1,
-        outlierColor: 'rgba(0,0,255,0.5)',
-        padding: 10,
-        itemRadius: 0,
-        data:heldoutResults.slice(4)
       }]
     };
     var  ctx = document.getElementById("canvas").getContext("2d");
@@ -190,10 +186,18 @@
 
     var root = document.getElementById('root');
       data_table.forEach(element => root.insertAdjacentHTML('beforebegin', `<tr><td>${element.group_name}</td><td>${element.submission}</td>
-<td>${element.within_mean.toFixed(4)}</td>
-<td>${element.within_std.toFixed(4)}</td>
-<td>${element.heldout_mean.toFixed(4)}</td>
-<td>${element.heldout_std.toFixed(4)}</td>
+<td>${element.mean.toFixed(4)}</td>
+<td>${element.std.toFixed(4)}</td>
+<td>${element.band0.toFixed(4)}</td>
+<td>${element.band1.toFixed(4)}</td>
+<td>${element.band2.toFixed(4)}</td>
+<td>${element.band3.toFixed(4)}</td>
+<td>${element.band4.toFixed(4)}</td>
+<td>${element.band5.toFixed(4)}</td>
+<td>${element.band6.toFixed(4)}</td>
+<td>${element.band7.toFixed(4)}</td>
+<td>${element.band8.toFixed(4)}</td>
+<td>${element.band9.toFixed(4)}</td>
 <td><b>${element.total.toFixed(4)}</b></td></tr>`));
 
 
