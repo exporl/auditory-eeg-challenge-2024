@@ -87,7 +87,7 @@ of sub-*.npz. Each  file contains a python dictionary with entries of the form:
 <p><strong>preprocessed_eeg/sub-*.npz : Preprocessed EEG test samples</strong>:
 If you used the already preprocessed data for training your models, this is the test data you want to use.
 The same preprocessing steps were applied to this data as to the training data and you can directly use it for testing.
-Each EEG segment is 5 seconds long, sampled at 64 Hz and it contains 64 channels.</p>
+Each EEG segment is 30 seconds long, sampled at 64 Hz and it contains 64 channels.</p>
 </li>
 <li>
 <p><strong>raw_eeg/sub-*.npz : Raw EEG test samples</strong>:
@@ -120,7 +120,7 @@ If you have any more questions about these data, please contact us.</p>
 <p>If you use the preprocessed version of the EEG data
 you can use <a href="https://github.com/exporl/auditory-eeg-challenge-2024-code/blob/main/task2_regression/experiments/test_regression.py">the provided code</a> to load in the data and use it for testing.
 This code will load in a baseline pretrained model,
-loop over all the data of the test set, predict the output labels and return json files in the correct format.</p>
+loop over all the data of the test set, predict the reconstructed Mel and return json files in the correct format.</p>
 <h3 id="expected-output">Expected output</h3>
 <p>As an output, participants should upload a zip file, containing json files to <a href="https://kuleuven-my.sharepoint.com/:f:/g/personal/lies_bollens_kuleuven_be/EhTPDzpHeg1LoLxmRNNt968BLSEFSJ8F6TecZepRHhdjMg">the following link</a>
 The files should follow the following naming convention:</p>
@@ -128,10 +128,8 @@ The files should follow the following naming convention:</p>
 <p>where <strong>submission_number</strong> should be 1 for
 the first submission and can go up to 2. We will use the latest submission as the final submission, from which the ranking will be calculated. Groups that have not yet supplied their group name, should send a mail to the
 organisers where they specify their name. When uploading, you will be prompted to enter a name. Please enter the name of one of the officially registered participants.</p>
-<p>The json file(s) should contain the predicted labels for all ID segments, which can be found in the mapping ( in the form of <strong>(segment_ID) : {&rsquo;eeg&rsquo;: eeg_id}</strong>.)
-Each entry in the submitted file should be of the form <strong>segment_ID : label</strong>.</p>
-<p>The json file(s) should contain the predicted labels for all EEG segments.
-Each entry in the submitted dictionary should be of the form (EEG ID) : (Reconstructed Mel).</p>
+<p>The json file(s) should contain the predicted mel spectrograms for all ID segments, which can be found in the mapping ( in the form of <strong>(segment_ID) : {&rsquo;eeg&rsquo;: eeg_id}</strong>.)
+Each entry in the submitted file should be of the form <strong>segment_ID : reconstructed Mel</strong>.</p>
 <p>A correlation value of 0 will be taken in case of absent EEG ID entries.
 The reconstructed mel should be of dimensions 10 x 1920 (i.e., 30 seconds of data at the prescribed sample rate of 64 Hz).</p>
 <p>For evaluation, we will calculate the mean correlation score over bands, per subject. Then, we will calculate the mean over all the subjects means to obtain a final <strong>score</strong>, which will be updated in the online leaderboard.</p>
