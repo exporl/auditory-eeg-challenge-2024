@@ -6,6 +6,17 @@ weight: 80
 ---
 
 ---
+### UPDATE 13/12/2023
+
+There was a mistake in the test set. 
+The raw files, and the MWF files 
+(eg. the files which were provided at 1024 Hz) 
+were not correctly aligned. 
+We have now corrected this mistake and replaced the files. 
+If you have already downloaded the test set, and you are using the raw files or the MWF files,
+please download it again. 
+For the preprocessed data, nothing has changed.
+For the files of task 1, nothing has changed. 
 
 ### Provided test dataset
 
