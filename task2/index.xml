@@ -30,8 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://exporl.github.io/auditory-eeg-challenge-2024/task2/test_set/</guid>
-      <description>Provided test dataset The test data for this task can be downloaded from here. The password is the same one as provided for the training set. The directory contains following items:
-sub-x_mapping.json: These files link the EEG files to the possible stimuli. Since you are free to use whatever version of the data you want, these json files contain keys to the EEG files. Each entry in the json file is of the form: (segment_ID) : {&amp;rsquo;eeg&amp;rsquo;: eeg_id}.</description>
+      <description>UPDATE 13/12/2023 There was a mistake in the test set. The raw files, and the MWF files (eg. the files which were provided at 1024 Hz) were not correctly aligned. We have now corrected this mistake and replaced the files. If you have already downloaded the test set, and you are using the raw files or the MWF files, please download it again. For the preprocessed data, nothing has changed.</description>
     </item>
     
   </channel>
