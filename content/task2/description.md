@@ -45,7 +45,7 @@ mel spectrograms for all EEG segments. Afterward, we will calculate the score me
 entry in the submitted dictionary should be of the form (EEG ID) : (Reconstructed Mel).
  
 A correlation value of 0 will be taken in case of
-absent EEG ID entries. The reconstructed envelope should be of dimensions 10 x 1920 (i.e., 30 seconds of data at the prescribed sample rate
+absent EEG ID entries. The reconstructed envelope should be of dimensions  1920 x 10 (i.e., 30 seconds of data at the prescribed sample rate
 of 64 Hz).
 
 
