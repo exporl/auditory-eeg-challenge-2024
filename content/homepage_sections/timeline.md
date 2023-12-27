@@ -4,6 +4,8 @@ weight: 60
 description: "Timeline"
 ---
 
+All deadlines are at 23:59 UTC-12 (anywhere on Earth).
+
  - August 30,2023 Registration opens
 - August 30, 2023: Release of training set, code, baseline methods and documentation
 - ~~November 15, 2023~~ November 28, 2023: Release of evaluation test set
