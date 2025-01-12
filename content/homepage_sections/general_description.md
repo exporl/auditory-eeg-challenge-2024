@@ -4,12 +4,9 @@ weight: 10
 description: "General description"
 ---
 
-## Test set update
 
-The test set is now online. 
-Downloading the test set: [link](https://homes.esat.kuleuven.be/~lbollens/sparrkulee/test_set).
-There is a separate folder for each task. For more information, look at the specific descriptions, 
-for either Task 1 or Task 2.
+
+
 
 ## Challenge Call 
 
@@ -37,6 +34,6 @@ We provide the dataset, code for preprocessing the EEG and for creating commonly
 representations, and two baseline methods.  
 
 Teams can register by sending a mail to
-[auditoryeegchallenge@kuleuven.be](auditoryeegchallenge@kuleuven.be) with the names of the team members, emails, and affiliations.
+[sparrkulee@kuleuven.be](sparrkulee@kuleuven.be) with the names of the team members, emails, and affiliations.
 The intellectual property (IP) is not transferred to the challenge organizers, i.e. if the code is shared/submitted, the participants remain 
 the owners of their code. 
